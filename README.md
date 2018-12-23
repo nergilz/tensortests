@@ -27,13 +27,13 @@
 Python ver 3.5 (or higher)
 ```
 
-'''bash
+```bash
 pip install selenium
-'''
+```
 
-'''bash
+```bash
 pip install -r reqirements.txt
-'''
+```
 
 ### Пример запуска в консоли
 ```bash
