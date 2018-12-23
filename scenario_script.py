@@ -1,10 +1,13 @@
 import time
+import argparse
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 
 
 def scenario_1():
+
+    url_tensor = 'https://yandex.ru/search/?text=%D1%82%D0%B5%D0%BD%D0%B7%D0%BE%D1%80&lr=22'
 
     try:
         driver = webdriver.Firefox()
@@ -20,13 +23,21 @@ def scenario_1():
         elem_find.send_keys(Keys.RETURN)
         time.sleep(3)
 
-        url = driver.find_element_by_link_text('tensor.ru')
-        driver.close()
+        url_text = driver.find_element_by_link_text('tensor.ru')
+        url_text.click()
+        time.sleep(3)
 
-        return True
+        url_current = driver.current_url
+
+        if url_tensor == url_current:
+
+            driver.quit()
+            return True
+        else:
+            return False
 
     except NoSuchElementException:
-        driver.close()
+        driver.quit()
         return False
 
 
@@ -62,13 +73,13 @@ def scenario_2():
         time.sleep(5)
 
         if src_image_first == src_image_second:
-            driver.close()
+            driver.quit()
             return True
         else:
             return False
 
     except NoSuchElementException:
-        driver.close()
+        driver.quit()
         return False
 
 
