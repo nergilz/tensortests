@@ -40,6 +40,10 @@ def scenario_1():
         driver.quit()
         return False
 
+    except WebDriverException:
+        driver.quit()
+        return False
+
 
 def scenario_2():
 
@@ -79,6 +83,10 @@ def scenario_2():
             return False
 
     except NoSuchElementException:
+        driver.quit()
+        return False
+
+    except WebDriverException:
         driver.quit()
         return False
 
