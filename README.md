@@ -19,6 +19,7 @@
 ---
 + Рекомендуется использовать [virtualenv](https://docs.python.org/3/library/venv.html)
 + Проект использует [selenium](https://github.com/SeleniumHQ/selenium/blob/master/py/docs/source/index.rst)
++ Скрипты адаптированны под браузер [Firefox](https://www.mozilla.org/ru/firefox/)
 
 ---
 ### Requirements
