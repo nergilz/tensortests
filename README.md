@@ -26,9 +26,11 @@
 ```bash
 Python ver 3.5 (or higher)
 ```
+
 '''bash
 pip install selenium
 '''
+
 '''bash
 pip install -r reqirements.txt
 '''
